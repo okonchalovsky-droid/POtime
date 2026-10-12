@@ -7,16 +7,16 @@ on:
       - main
       - master
   pull_request:
-
+  
 jobs:
-  build-uf2:
+  build:
     runs-on: ubuntu-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-      
     steps:
-      - name: Checkout project
+      - name: Checkout repository
         uses: actions/checkout@v4
+
 
       - name: Install build tools
         run: |
